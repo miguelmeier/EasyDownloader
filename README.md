@@ -10,7 +10,7 @@
 > ⚡ **Fully local processing** – no external servers, no data tracking, 100% privacy.
 
 ## 🎥 Demo
-[Watch the Demo on Streamable](https://streamable.com/z2fdya) 
+<div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/z2fdya?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
 
 
 ## ⭐ Why EasyDownloader?
