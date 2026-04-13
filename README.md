@@ -64,3 +64,5 @@ Thanks to the built-in Drag & Drop Builder, you can use almost any format! For e
 ## 🛡️ License
 
 **This project is licensed under the MIT License. See the LICENSE file for more details.**
+
+https://streamable.com/z2fdya
