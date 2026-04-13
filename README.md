@@ -1,144 +1,82 @@
-# 🚀 EasyDownloader – MEGA & Dropbox Downloader
+<div align="center">
+  <h1>🚀 EasyDownloader</h1>
+  <p><b>A powerful, local web-based downloader for MEGA and Dropbox with proxy rotation, parallel downloads, and bandwidth limit bypass.</b></p>
+  
+  <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey.svg" alt="Platform">
+</div>
 
-A powerful **local web-based downloader** for MEGA and Dropbox with **proxy rotation, parallel downloads, and bandwidth bypass**.
-
-> ⚡ Fully local – no external servers, no data tracking
-
----
+> ⚡ **Fully local processing** – no external servers, no data tracking, 100% privacy.
 
 ## 🎥 Demo
+[Watch the Demo on Streamable](https://streamable.com/z2fdya) 
 
-https://streamable.com/z2fdya
-
----
 
 ## ⭐ Why EasyDownloader?
+Tired of hitting the MEGA bandwidth quota? **EasyDownloader** solves this by routing your downloads through rotating proxies, allowing for seamless, uninterrupted file retrieval. Wrapped in a beautiful, responsive, dark-mode web UI, it makes managing bulk downloads from MEGA and Dropbox easier than ever.
 
-- 🚀 Bypass MEGA bandwidth limits using proxy rotation
-- 📦 Download files & folders (MEGA + Dropbox)
-- 🔁 Automatic proxy switching on failure
-- 🌐 Clean, modern web interface
-- ⚡ Parallel downloads for maximum speed
-- 🔐 100% local processing (no third-party APIs)
+## ✨ Key Features
+* **🚀 Quota Bypass:** Circumvent MEGA bandwidth limits using smart proxy rotation.
+* **📦 Broad Support:** Download individual files, single folders, or bulk multi-folders from both MEGA.nz and Dropbox.
+* **🔁 Smart Proxy System:** Automatically validates proxies, removes dead ones, and rotates upon failure. Features a unique **Drag & Drop Proxy Builder** for custom configurations!
+* **⚡ High-Speed:** Parallel downloads utilizing multiple threads and proxies simultaneously.
+* **🤖 Zero-Config Auto-Setup:** Just run the script! It automatically creates a Python virtual environment (`.venv`) and installs all necessary dependencies.
+* **🌐 Modern UI:** Clean web interface with Dark Mode, bilingual support (English/German), and a real-time download log.
 
----
+## 🛠️ How It Works
+1. Parses MEGA/Dropbox links securely.
+2. Splits downloads into chunks for efficiency.
+3. Distributes traffic across your proxy list.
+4. Decrypts (MEGA) and reassembles files entirely locally.
 
-## ✨ Features
+## 📥 Installation & Usage
 
-### 📦 Supported Services
-- MEGA.nz (files & folders)
-- Dropbox (files & folders)
+### 🖥️ Option 1: Windows Executable (.exe) - *Easiest*
+1. Go to the **[Releases](../../releases)** section.
+2. Download the latest `.exe` file.
+3. Run the application. 
+4. The web interface will automatically open in your browser at `http://127.0.0.1:5000`.
 
----
-
-### ⚙️ Download Modes
-- Single File
-- Single Folder
-- Multi-Folder (bulk download)
-- Mixed Mode (files + folders together)
-
----
-
-### 🔁 Smart Proxy System
-- Drag & Drop Proxy Builder (supports custom formats)
-- Automatic proxy validation (removes dead proxies)
-- Auto-rotation when limits are hit
-- Manual proxy input via UI
-
----
-
-### 🌐 Web Interface
-- Modern dark-mode UI
-- Live download log
-- Responsive design
-
----
-
-### 🔐 Privacy
-- Local MEGA decryption
-- No external services involved
-
----
-
-## 🛠️ How it works
-
-- Parses MEGA/Dropbox links
-- Splits downloads into chunks
-- Uses proxies to distribute traffic
-- Reassembles files locally
-
----
-
-## 📥 Installation
-
-### 🖥️ Option 1 – Windows (.exe)
-
-1. Go to the **Releases** section
-2. Download the latest `.exe`
-3. Run the application
-
-➡ Opens automatically at:
-http://127.0.0.1:5000
-
----
-
-### 🐍 Option 2 – Python
+### 🐍 Option 2: Run via Python
+Make sure you have Python 3.10 or higher installed.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/miguelmeier/easy-downloader-mega-dropbox.git
+cd easy-downloader-mega-dropbox
 python app.py
 ```
-On first launch:
-- Creates a virtual environment (.venv)
-- Installs all dependencies automatically
+
+**Magic Auto-Setup:** On the very first launch, `app.py` will automatically create a virtual environment and install required packages (`Flask`, `requests`, `pycryptodome`, `mega.py`). No manual `pip install` required!
+
+## ⚙️ Proxy Configuration
+To bypass download limits, you can add proxies manually via the Web UI, or simply create a `proxies.txt` file in the root directory.
+
+**Example `proxies.txt` format:**
+```text
+192.168.1.1:8080:username:password
+10.0.0.1:3128
+```
+*Tip: Use the Drag & Drop Proxy Builder in the web interface to match your exact text file format (e.g., choosing the correct delimiter or order of IP/Port/User).*
+
+## 🆚 Feature Comparison
+
+| Feature | EasyDownloader | Typical Downloaders |
+| :--- | :---: | :---: |
+| **Proxy Rotation & Limit Bypass** | ✅ | ❌ |
+| **Modern Web Interface** | ✅ | ❌ |
+| **Bulk Multi-Link Support** | ✅ | ⚠️ |
+| **Local Auto-Decryption** | ✅ | ❌ |
+| **Zero-Config Auto-Setup** | ✅ | ❌ |
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues). 
+
+## ⚠️ Disclaimer
+This tool is intended for educational purposes only. Users are solely responsible for complying with the Terms of Service of MEGA and Dropbox. 
+
+## 🛡️ License
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-
-### 📋 Requirements
-- Python 3.10+
-- Windows / Linux
-
----
-
-### ⚙️ Proxy Setup
-Create a file named:
-``proxies.txt``
-
-Example format:
-``IP:PORT:USERNAME:PASSWORD``
-
-Use the Drag & Drop Builder in the UI to match your proxy format.
-
----
-
-### 🧠 Use Cases
-- Bypass MEGA bandwidth limits
-- Bulk download cloud storage files
-- Automate downloads using proxy lists
-- High-speed parallel downloading
-
----
-
-### 🆚 Comparison
-Feature	            EasyDownloader	Typical Downloaders
-Proxy Rotation	    ✅	            ❌
-Web Interface	      ✅            	❌
-Multi-Link Support	✅	            ⚠️
-Local Decryption	  ✅	            ❌
-
----
-
-### ⚠️ Disclaimer
-This tool is intended for educational purposes only.
-Users are responsible for complying with the terms of service of MEGA and Dropbox.
-
---- 
-
-### 🛡️ License
-MIT License – see LICENSE file.
-
----
-
-### ⭐ Support
-If you like this project, consider giving it a star ⭐
+**If you find this tool helpful, please consider giving it a ⭐! It helps the project grow.**
