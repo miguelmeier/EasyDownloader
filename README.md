@@ -1,4 +1,4 @@
-# MEGA & Dropbox Downloader v3
+# MEGA & Dropbox Downloader v1
 
 A powerful, local web service for automated and parallel downloading of files and folders from MEGA and Dropbox. The tool offers a modern web interface, supports extensive proxy management, and reliably bypasses bandwidth limits.
 
